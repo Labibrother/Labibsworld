@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Labib's World</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width : 568px)">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<script type="text/javascript" src="js/mobile.js"></script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html" class="logo">
+			<img src="images/logo.png" alt="labib's world tokyo">
+		</a>
+		<ul id="navigation">
+			<li class="selected">
+				<a href="index.html">home</a>
+			</li>
+			<li>
+				<a href="gallery.html">gallery</a>
+			</li>
+			<li>
+				<a href="intro.html">about me</a>
+			</li>
+		</ul>
+	</div>
+			<table>
+			<td id="box">
+			<img src="images/cat_off.png" width="500px"  id="cat">
+			</td>
+			<td id="welc"></td>
+			</table>
+	<div id="footer">
+		<div>
+			<p>&copy; 23229564 Labib Mashfiq Rahman</p>
+			<ul>Did you click the cat?</ul>
+		</div>
+		
+	<script>
+    document.getElementById('cat').addEventListener('click', function() {this.src = 'images/cat_on.png';
+      setTimeout(() => {this.src = 'images/cat_off.png';}, 200);});
+  </script>
+  <script>
+    let text;
+	let guest = prompt("Welcome to my very own corner in the web!\n( ͡° ͜ʖ ͡°) What should I call you?", "Please input your name");
+	if (guest == null || guest == "")
+	{ text = "Hello there! Welcome to my page!";}
+	else if (guest.toLowerCase() === "ozaydin") {
+        text = "Hello Professor Ozaydin! Welcome to my page!";}
+	else if (guest.toLowerCase() === "fatih") {
+        text = "Hello Professor Fatih! Welcome to my page!";}
+	else if (guest.toLowerCase() === "fatih ozaydin") {
+        text = "Hello Professor Fatih! Welcome to my page!";}
+	else if (guest.toLowerCase() === "ozaydin fatih") {
+        text = "Hello Professor Ozaydin! Welcome to my page!";}
+	else
+	{text = "Hello " + guest + "! Welcome to my page!";}
+  document.getElementById("welc").innerHTML = text;
+  </script>
+</body>
+</html>
